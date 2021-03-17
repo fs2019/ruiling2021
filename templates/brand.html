@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+<head>
+    <title>{{ title }}</title>
+	{% block css %}
+		<style type="text/css">
+			#li_nav01>a>span{
+				color:red;
+			}
+
+		</style>
+	<link rel="stylesheet" type="text/css" href="../static/css/brand.css"/>
+	{% endblock %}
+</head>
+
+{% block content %}
+<div id="" style="background-color: #666666;">
+	<div class="focus" >
+	    <a href="javascript:;" class="focus_l">
+	        &lt; </a>
+	    <a href="javascript:;" class="focus_r"> &gt;</a>
+	    <ul class="pic_ul">
+	        <li>
+	            <a href="#"><img src="../static/img/1.jpg" alt=""></a>
+	        </li>
+	        <li>
+	            <a href="#"><img src="../static/img/2.jpg" alt=""></a>
+	        </li>
+	        <li>
+	            <a href="#"><img src="../static/img/3.jpg" alt=""></a>
+	        </li>
+	    </ul>
+	    <ol class="focus_ol">
+	    </ol>
+		<script type="text/javascript" src="../static/js/brand.js"></script>
+	</div>
+</div>
+<p style="font-size: 30px;">品牌介绍</p>
+
+{% endblock %}
+

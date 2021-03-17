@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{{ title }}</title>
+	<link type="text/css" rel="stylesheet" href="../static/css/layout.css">
+	<link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='img/logo.ico') }}">
+	{% block css %}{% endblock %}
+<body>
+	<header >
+		<nav>
+			<ul id="header_nav" style="position: absolute;z-index: 2;">
+				<li id='li_nav_us'><a href="{{ url_for('AboutUs') }}"><span>关于我们</span></a></li>
+				
+				<li id='li_nav01'  class="nav_menu01"><a href="{{ url_for('brand') }}"><span>品牌介绍</span></a>
+					<ul id="ul_nav_index" class="nav_menu02" >
+						<li><a href="#"><span>UKURUILING</span></a></li>
+						<li><a href="#"><span>BRIGHT STAR</span></a></li>
+						<li><a href="#"><span>EXSEN KRUPP</span></a></li>
+					</ul>
+				</li>
+				
+				<li id="li_nav02" class="nav_menu01"><a href="{{ url_for('goodsIndex') }}" ><span>产品系列</span></a>
+					<ul id="ul_nav_goods" class="nav_menu02" style="z-index: 2;">
+						<li><a href="#"><span>尤克里里</span></a></li>
+						<li><a href="{{ url_for('JiTa') }}"><span>吉&nbsp;&nbsp;他</span></a></li>
+						<li><a href="#"><span>卡林吧</span></a></li>
+						<li><a href="#"><span>钢&nbsp;&nbsp;琴</span></a></li>
+						<li><a href="#"><span>非洲鼓</span></a></li>
+						<li><a href="#"><span>配&nbsp;&nbsp;件</span></a></li>
+					</ul>
+				</li>				
+				
+				<li style="background-color: snow;"><img height="70px" src="../static/img/logoT05.PNG" ></li>		
+				
+				<li id="li_nav05"><a href="{{ url_for('GNetwork') }}"><span>全球网络</span></a></li>
+						
+				<li id="li_nav03"><a href="{{ url_for('CompanyNews') }}"><span>新闻资讯</span></a>
+					<ul id="ul_nav_news">
+						<li><a href="#">行业新闻</a></li>
+						<li><a href="#">公司新闻</a></li>
+						<li><a href="#">公司活动</a></li>
+					</ul>
+				</li>
+				
+				<li id="li_nav04" ><a href="{{ url_for('ContactUs') }}"><span>联系我们</span></a></li>
+				
+				<li id="li_nav06"><a href="{{ url_for('ASS') }}"><span>售后服务</span></a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<main>
+		{% block content %}{% endblock %}
+		{% block script %}{% endblock %}
+	</main>
+		
+	<footer style="background-color: #000000;position: relative;width: 100%;
+		color: #DFDFDF;padding-top: 15px;">
+		<span><a href="">关于我们</a></span>
+		<span><a href="">品牌介绍</a></span>
+		<span><a href="">产品系列</a></span>
+		<span><a href="">新闻资讯</a></span>
+		<span><a href="">全球网络</a></span>
+		<span><a href="">联系我们</a></span>
+		<span><a href="">售后服务</a></span>
+		<p style="margin-left: 20px;margin-top: 20px;">Copyright @ 2020 www.ruilingmuk.com, All Rights Reserved<br>
+		E-mail:ruilingmuk@163.com tel:+86-021-51112111 13951736532	</p>
+			
+	</footer>
+	<script type="text/javascript" src="../static/js/layout.js"></script>
+</body>
+</html>

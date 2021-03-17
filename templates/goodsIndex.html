@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+<head>
+    <title>{{ title }}</title>
+	{% block css %}
+		<style type="text/css">
+			#li_nav02>a>span{
+				color:red;
+			}
+			a{
+				text-decoration: none;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="../static/css/goodsindex.css"/>
+	{% endblock %}
+</head>
+
+{% block content %}
+	<div id="" style="background-color: #666666;">
+		<div class="focus" >
+		    <a href="javascript:;" class="focus_l">
+		        &lt; </a>
+		    <a href="javascript:;" class="focus_r"> &gt;</a>
+		    <ul class="pic_ul">
+		        <li>
+		            <a href="#"><img src="../static/img/100.jpg" alt=""></a>
+		        </li>
+				<li>
+				    <a href="#"><img src="../static/img/101.jpg" alt=""></a>
+				</li>
+		        <li>
+		            <a href="#"><img src="../static/img/102.jpg" alt=""></a>
+		        </li>
+		        <li>
+		            <a href="#"><img src="../static/img/103.jpg" alt=""></a>
+		        </li>
+		        <li>
+		            <a href="#"><img src="../static/img/104.jpg" alt=""></a>
+		        </li>
+		        <li>
+		            <a href="#"><img src="../static/img/105.jpg" alt=""></a>
+		        </li>
+		    </ul>
+		    <ol class="focus_ol">
+		    </ol>
+			<script type="text/javascript" src="../static/js/goodsindex.js"></script>
+		</div>
+	</div>
+	<a href="#"><span style="font-size: 20px;padding-left: 15px;">尤克里里</span></a>
+	<a href="{{ url_for('JiTa') }}"><span style="font-size: 20px;padding-left: 15px;">吉他</span></a>
+	<a href="#"><span style="font-size: 20px;padding-left: 15px;">卡林吧</span></a>
+	<a href="#"><span style="font-size: 20px;padding-left: 15px;">钢琴</span></a>
+	<a href="#"><span style="font-size: 20px;padding-left: 15px;">非洲鼓</span></a></li>
+	<a href="#"><span style="font-size: 20px;padding-left: 15px;">配件</span></a><br>
+	<div id="" style="padding: 15px;width: 1700px;">
+		<img width="250px" height="250px" src="../static/img/100.jpg" >
+		<img width="250px" height="250px" src="../static/img/102.jpg" >
+		<img width="250px" height="250px" src="../static/img/103.jpg" >
+		<img width="250px" height="250px" src="../static/img/101.jpg" >
+		<img width="250px" height="250px" src="../static/img/104.jpg" >
+		<img width="250px" height="250px" src="../static/img/105.jpg" >
+	</div>
+	
+{% endblock %}
+
